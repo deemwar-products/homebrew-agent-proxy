@@ -4,22 +4,22 @@ cask "agentproxy" do
 
   on_macos do
     on_intel do
-      sha256 "e41d9a8927d8f4616d2f659f8c639020b6d405add36b45eb621a7f75cf2b26e4"
+      sha256 "7457ec7544cdf72e5b7a884164e9637bebdbc0a6c40c178fdffaab70433caebc"
       url "https://github.com/deemwar-products/agent-proxy-dist/releases/download/v#{version}/agentproxy_#{version}_darwin_amd64.tar.gz"
     end
     on_arm do
-      sha256 "3d7f2673e994d13f613b02b3c96e8fa715744828a70f2da0500a53e172ee2e6b"
+      sha256 "784d64105fb84b9c4ca4292a7280cf36d1070490d65a4800e29ea6d36ad1f703"
       url "https://github.com/deemwar-products/agent-proxy-dist/releases/download/v#{version}/agentproxy_#{version}_darwin_arm64.tar.gz"
     end
   end
 
   on_linux do
     on_intel do
-      sha256 "e5f7ebf38c3398f29eff5d30e772a466f4d16f31172544e4802648859bdc7516"
+      sha256 "7e50c3bd68f50a6e35fed79691976f5946b9c4fb22b250bd8bffc5ed2b049f46"
       url "https://github.com/deemwar-products/agent-proxy-dist/releases/download/v#{version}/agentproxy_#{version}_linux_amd64.tar.gz"
     end
     on_arm do
-      sha256 "3721684de61e8e505d3c72f2f133822122a36eeadfb885820962c86ff31d243e"
+      sha256 "1572d47c8a9aa6ceec8b8e014c4e0c87251ca1694e2e643de656e4da38691159"
       url "https://github.com/deemwar-products/agent-proxy-dist/releases/download/v#{version}/agentproxy_#{version}_linux_arm64.tar.gz"
     end
   end
