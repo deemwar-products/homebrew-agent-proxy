@@ -25,7 +25,7 @@ cask "agentproxy" do
   end
 
   name "agentproxy"
-  desc "Local MITM proxy that masks secrets before they leave your machine"
+  desc "Hard budget caps for AI coding agents - blocks the next request at the network boundary before it costs more"
   homepage "https://agentproxy.deemwar.com"
 
   livecheck do
