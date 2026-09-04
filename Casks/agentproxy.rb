@@ -3,7 +3,7 @@ cask "agentproxy" do
   name "agentproxy"
   desc "Hard budget caps for AI coding agents - blocks the next request at the network boundary before it costs more"
   homepage "https://agentproxy.deemwar.com"
-  version "0.1.4"
+  version "0.1.5"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,23 +14,27 @@ cask "agentproxy" do
   on_macos do
     on_intel do
       url "https://github.com/deemwar-products/agent-proxy-dist/releases/download/v#{version}/agentproxy_#{version}_darwin_amd64.tar.gz"
-      sha256 "b79151aed1023468ca55c10fbb58a861334cacb43fffad451f3089b387106da0"
+      sha256 "ffe71ee2c83646f403d12c1414598054bfb147f42b69e857bb6ff37947c64028"
     end
     on_arm do
       url "https://github.com/deemwar-products/agent-proxy-dist/releases/download/v#{version}/agentproxy_#{version}_darwin_arm64.tar.gz"
-      sha256 "0669626d63faf3ac231ab021e238305c3e30c377cc3a394378d5a4e53e318034"
+      sha256 "fd642f35fac45b15a8c1593e77fe3680b9dfa36347e7448cec15cded403fac17"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/deemwar-products/agent-proxy-dist/releases/download/v#{version}/agentproxy_#{version}_linux_amd64.tar.gz"
-      sha256 "b67552928cdf0877e459d82bc3b5f838f84c10242d4e3621ab6b59b0c967201d"
+      sha256 "4d9307f0661af771dd1e6a5f460fefd95a89ac831aff14fb10833122d03f2339"
     end
     on_arm do
       url "https://github.com/deemwar-products/agent-proxy-dist/releases/download/v#{version}/agentproxy_#{version}_linux_arm64.tar.gz"
-      sha256 "d0f926dca6a6ec3781b859a79c28697ffcc8ffc2c8e8a8ea996e24f59bbaa9aa"
+      sha256 "be5fe41e3e931c2b11579168dbf7c6118ba918d05046f89c75fcbebb90915102"
     end
+  end
+
+  postflight do
+    system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", staged_path]
   end
 
   # No zap stanza required
